@@ -41,6 +41,7 @@
         MacOS = Shift + Option + 
 
     Change Workspace = ctrl + r    
+    Next or Previous Method or Tag = ctrl + Up / Down    
 
 
 ### Settings
