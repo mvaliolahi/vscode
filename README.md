@@ -23,9 +23,11 @@
     Select All Occurrences of selected word = crtl + shift + L
     Select Match To Selected Text = Ctrl + d (for next one one again press ctrl + d)
 
+    Next or Previous Method or Tag = ctrl + Up / Down    
     File All References = alt + shift + F12
     Go to Symbol in File = ctrl + shift + O  | | ctrl + p ---> type @
     Go to Symbol in Workspace = Ctrl+T
+
     Expand Selection =  Shift+Alt+Left or Shift+Alt+Right
     Code Folding = Ctrl+Shift+[ OR  Ctrl+Shift+]
     Line Height = crtl + ,  ---> search for line Height then -----> set to 40
@@ -41,7 +43,6 @@
         MacOS = Shift + Option + 
 
     Change Workspace = ctrl + r    
-    Next or Previous Method or Tag = ctrl + Up / Down    
 
 
 ### Settings
