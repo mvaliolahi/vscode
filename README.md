@@ -23,7 +23,7 @@
     Select All Occurrences of selected word = crtl + shift + L
     Select Match To Selected Text = Ctrl + d (for next one one again press ctrl + d)
 
-    Next or Previous Method or Tag = ctrl + Up / Down    
+    Next or Previous Method or Tag = ctrl + up arrow key Or down arrow key
     File All References = alt + shift + F12
     Go to Symbol in File = ctrl + shift + O  | | ctrl + p ---> type @
     Go to Symbol in Workspace = Ctrl+T
