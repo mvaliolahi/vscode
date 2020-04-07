@@ -40,6 +40,8 @@
         Windows = Shift + Alt + F
         MacOS = Shift + Option + 
 
+    Change Workspace = ctrl + r    
+
 
 ### Settings
 
