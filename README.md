@@ -49,8 +49,7 @@
     List of all files open in an editor group: ctrl + tab
     Focus Breadcrumbs =  ctrl + shift + . 
     Bracket matching = Ctrl + Shift + \
-
-
+    Switch to previous open file: ctrl + p + ctrl + p
 
 
 ### Settings
