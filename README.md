@@ -1,6 +1,6 @@
 # Visual Studio Code For PHP Developers
 
-### Visual Studio  Shortcuts
+###  Shortcuts
 
     Command Mode = Ctrl + Shift + p 
     Focuse on Explorer = ctrl + 0
