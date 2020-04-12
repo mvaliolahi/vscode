@@ -51,6 +51,7 @@
     Bracket matching = Ctrl + Shift + \
     Switch to previous open file = ctrl + p + ctrl + p
     Open Reference = ctrl + shift + mouse left
+    Goto Previous Edit point = ctrl + alt + -
 
 
 ### Settings
