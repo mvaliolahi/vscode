@@ -22,6 +22,7 @@
     Select current line = Ctrl+L
     Select All Occurrences of selected word = crtl + shift + L
     Select Match To Selected Text = Ctrl + d (for next one one again press ctrl + d)
+    Multiple Cursor: alt + mouse left
 
     Next or Previous Method or Tag = ctrl + up arrow key Or down arrow key
     File All References = alt + shift + F12
@@ -62,6 +63,83 @@
         ` To disable the built-in PHP smart completions in favor of suggestions from an installed
           PHP extension, uncheck PHP > Suggest: Basic, which sets php.suggest.basic to false in your settings.json file. `
 
+
+### Debugging
+
+#### Install Xdebug
+
+    sudo apt install php-xdebug
+
+Then run sudo nano /etc/php/7.2/mods-available/xdebug.ini and add the following lines:
+
+    xdebug.remote_enable = 1
+    xdebug.remote_autostart = 1
+    xdebug.remote_host = x.x.x.x # for docker
+
+#### Xdebug plugin
+
+    felixfbecker.php-debug
+
+
+![xdebug](./images/xdebug1.gif)
+![xdebug](./images/xdebug2.gif)
+
+
+#### Configure Xdebug to open file links with VS Code
+
+ When you encounter an error, or when you use the Symfony debug toolbar or the profiler, you may want toopen the desired file directly in your IDE with the cursor at the corresponding line.
+
+To be able to do that, you need to add the following line to your /etc/php/7.2/mods-available/xdebug.ini:
+
+    xdebug.file_link_format = vscode://file/%f:%l
+
+    xdebug.file_link_format = 'vscode://file/%f:%l&/path/to/app/in/docker/>/path/to/app/on/host/' # docker version
+
+![xdebug](./images/xdebug3.gif)
+
+
+### PHP CS Fixer
+
+    composer global require friendsofphp/php-cs-fixer
+
+
+#### plugin
+
+    junstyle.php-cs-fixer
+
+#### settings
+
+    "[php]": {
+        "editor.defaultFormatter": "junstyle.php-cs-fixer",
+        "editor.formatOnSave": true
+    },
+
+![xdebug](./images/php-cs-fixer.gif)
+
+#### PHP CS Fixer config file
+
+If you want to disable or enable some specific linting rules, you can do it in a .php_cs file at the root folder of your project. If this configuration file is present, VS Code takes it into account and overrides the configuration found in settings.json. You can find more information about the .php_cs file in the GitHub repository. A simple config file to use @PhpCsFixer category and disable some rules could be:
+
+
+```php 
+    <?php
+
+    return PhpCsFixer\Config::create()
+        ->setRules([
+            '@PhpCsFixer' => true,
+            'php_unit_internal_class' => false,
+            'php_unit_test_class_requires_covers' => false,
+        ])
+    ;
+```
+
+#### In case of issues with format on save
+
+Depending on your computer's speed, the length of your files and the number of rules you activate, linting a file on save can be slow, causing VS Code to refuse it. To fix this behavior, change the formatOnSaveTimeout in your settings.json:
+
+    "editor.formatOnSaveTimeout": 5000,
+
+
 ### Tips and Tricks
 
 ##### Show List of Extentions
@@ -75,7 +153,6 @@
 ##### Install From File
 
     $ less extentions.txt | xargs -n 1 code --install-extension
-
 
 ### Awesome Plugins 
 
