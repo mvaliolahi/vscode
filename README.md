@@ -65,7 +65,7 @@
 
         ` To disable the built-in PHP smart completions in favor of suggestions from an installed
           PHP extension, uncheck PHP > Suggest: Basic, which sets php.suggest.basic to false in your settings.json file. `
-
+    - Open files in new tab = "workbench.editor.enablePreview": false
 
 ### Debugging
 
