@@ -1,8 +1,7 @@
 # Visual Studio Code For PHP Developers
 
-<div style="text-align:center">
-    <img src="./images/vscode.png" />
-</div>
+ 
+<p align="center"><img src="./images/vscode.png" width="400"></p>
 
 ###  Shortcuts
 
