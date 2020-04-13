@@ -1,5 +1,7 @@
 # Visual Studio Code For PHP Developers
 
+![vs-code](./images/vscode.jpg)
+
 ###  Shortcuts
 
     Command Mode = Ctrl + Shift + p 
