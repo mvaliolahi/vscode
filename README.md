@@ -1,6 +1,8 @@
 # Visual Studio Code For PHP Developers
 
-![vs-code](./images/vscode.jpg)
+<div style="text-align:center">
+    <img src="./images/vscode.png" />
+</div>
 
 ###  Shortcuts
 
