@@ -67,6 +67,7 @@
           PHP extension, uncheck PHP > Suggest: Basic, which sets php.suggest.basic to false in your settings.json file. `
     - Open files in new tab = "workbench.editor.enablePreview": false
     - Hidden Menu Bar = ctrl + shift + p  ---> Toggle Menu Bar
+    - Remove Visual Studio Code from title bar = goto settings and search for '"window.title": "${activeEditorLong}"' then remove appName.
 
 ### Debugging
 
