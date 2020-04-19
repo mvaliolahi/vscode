@@ -69,6 +69,11 @@
     - Hidden Menu Bar = ctrl + shift + p  ---> Toggle Menu Bar
     - Remove Visual Studio Code from title bar = goto settings and search for '"window.title": "${activeEditorLong}"' then remove appName.
 
+### Font
+
+        "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+        "editor.fontLigatures": true,
+
 ### Debugging
 
 #### Install Xdebug
@@ -161,46 +166,57 @@ Depending on your computer's speed, the length of your files and the number of r
 
 ### Awesome Plugins 
 
-    adamvoss.vscode-languagetool
-    amiralizadeh9480.laravel-extra-intellisense
-    atlassian.atlascode
-    austenc.tailwind-docs
-    BernardXiong.env-vscode
-    bmewburn.vscode-intelephense-client
-    bradlc.vscode-tailwindcss
-    calebporzio.better-phpunit
-    damianbal.vs-phpclassgen
-    donjayamanne.jquerysnippets
-    eamodio.gitlens
-    EdgardMessias.clipboard-manager
-    Equinusocio.vsc-community-material-theme
-    Equinusocio.vsc-material-theme
-    equinusocio.vsc-material-theme-icons
-    felixfbecker.php-debug
-    formulahendry.auto-close-tag
-    formulahendry.auto-rename-tag
-    formulahendry.code-runner
-    jakebathman.mysql-syntax
-    liuji-jim.vue
-    MehediDracula.php-constructor
-    MehediDracula.php-namespace-resolver
-    mikestead.dotenv
-    mishkinf.goto-next-previous-member
-    ms-azuretools.vscode-docker
-    ms-vsliveshare.vsliveshare
-    neilbrayfield.php-docblocker
-    octref.vetur
-    onecentlin.laravel-blade
-    onecentlin.laravel5-snippets
-    phproberto.vscode-php-getters-setters
-    PKief.material-icon-theme
-    redhat.vscode-yaml
-    royaction.color-manager
-    sandy081.todotasks
-    sidharthachatterjee.vscode-tailwindcss
-    sleistner.vscode-fileutils
-    steoates.autoimport
-    thisotherthing.vscode-todo-list
-    vscode-icons-team.vscode-icons
-    wushuaiBUAA.autocomplete-english-word
-    ypresto.vscode-intelli-refactor    
+adamvoss.vscode-languagetool
+alefragnani.Bookmarks
+amiralizadeh9480.laravel-extra-intellisense
+Anjali.clipboard-history
+atlassian.atlascode
+austenc.tailwind-docs
+BernardXiong.env-vscode
+bmewburn.vscode-intelephense-client
+bradlc.vscode-tailwindcss
+calebporzio.better-phpunit
+christian-kohler.path-intellisense
+CoenraadS.disableligatures
+damianbal.vs-phpclassgen
+donjayamanne.jquerysnippets
+eamodio.gitlens
+ecmel.vscode-html-css
+EdgardMessias.clipboard-manager
+Equinusocio.vsc-community-material-theme
+Equinusocio.vsc-material-theme
+equinusocio.vsc-material-theme-icons
+felixfbecker.php-debug
+formulahendry.auto-close-tag
+formulahendry.auto-rename-tag
+formulahendry.code-runner
+iocave.monkey-patch
+jakebathman.mysql-syntax
+junstyle.php-cs-fixer
+liuji-jim.vue
+MehediDracula.php-constructor
+MehediDracula.php-namespace-resolver
+mikestead.dotenv
+mishkinf.goto-next-previous-member
+ms-azuretools.vscode-docker
+ms-vsliveshare.vsliveshare
+msjsdiag.vscode-react-native
+naumovs.color-highlight
+neilbrayfield.php-docblocker
+octref.vetur
+onecentlin.laravel-blade
+onecentlin.laravel5-snippets
+phproberto.vscode-php-getters-setters
+PKief.material-icon-theme
+redhat.vscode-yaml
+royaction.color-manager
+sandy081.todotasks
+sensourceinc.vscode-sql-beautify
+sidharthachatterjee.vscode-tailwindcss
+sleistner.vscode-fileutils
+steoates.autoimport
+techer.open-in-browser
+thisotherthing.vscode-todo-list
+vscode-icons-team.vscode-icons
+wushuaiBUAA.autocomplete-english-word
+ypresto.vscode-intelli-refactor   
