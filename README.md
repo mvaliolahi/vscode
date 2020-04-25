@@ -167,6 +167,7 @@ Depending on your computer's speed, the length of your files and the number of r
 ### Awesome Plugins 
 
 adamvoss.vscode-languagetool
+adrianwilczynski.alpine-js-intellisense
 alefragnani.Bookmarks
 amiralizadeh9480.laravel-extra-intellisense
 Anjali.clipboard-history
@@ -190,6 +191,7 @@ felixfbecker.php-debug
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
+freshbitsweb.laravel-traveller
 iocave.monkey-patch
 jakebathman.mysql-syntax
 junstyle.php-cs-fixer
@@ -219,4 +221,4 @@ techer.open-in-browser
 thisotherthing.vscode-todo-list
 vscode-icons-team.vscode-icons
 wushuaiBUAA.autocomplete-english-word
-ypresto.vscode-intelli-refactor   
+ypresto.vscode-intelli-refactor
