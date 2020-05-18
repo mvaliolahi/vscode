@@ -6,15 +6,15 @@
 ###  Shortcuts
 
     Command Mode = Ctrl + Shift + p 
-    Focuse on Explorer = ctrl + 0
+    Focuses on Explorer = ctrl + 0
     Move Selected Lines = alt + up / down
     Hide tree view = Ctrl + B 
 
     Explorer  = Ctrl + shift + E
     Version Control (Git)  = Ctrl + shift + v
-    Serach = Ctrl + shift + f 
-    Debuger = ctrl + shift + d
-    Extentions  = Ctrl + shift + x
+    Search = Ctrl + shift + f 
+    Debugger = ctrl + shift + d
+    Extensions  = Ctrl + shift + x
 
     Key Binding  = Ctrl + K + S 
     Setting = Ctrl + ,  
