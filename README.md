@@ -167,7 +167,6 @@ Depending on your computer's speed, the length of your files and the number of r
 
 ### Awesome Plugins 
 
-    adamvoss.vscode-languagetool
     adrianwilczynski.alpine-js-intellisense
     alefragnani.Bookmarks
     amiralizadeh9480.laravel-extra-intellisense
@@ -197,12 +196,12 @@ Depending on your computer's speed, the length of your files and the number of r
     jakebathman.mysql-syntax
     junstyle.php-cs-fixer
     liuji-jim.vue
+    mads-hartmann.bash-ide-vscode
     MehediDracula.php-constructor
     MehediDracula.php-namespace-resolver
     mikestead.dotenv
     mishkinf.goto-next-previous-member
     ms-azuretools.vscode-docker
-    ms-vsliveshare.vsliveshare
     msjsdiag.vscode-react-native
     naumovs.color-highlight
     neilbrayfield.php-docblocker
@@ -211,15 +210,19 @@ Depending on your computer's speed, the length of your files and the number of r
     onecentlin.laravel5-snippets
     phproberto.vscode-php-getters-setters
     PKief.material-icon-theme
+    rebornix.ruby
     redhat.vscode-yaml
     royaction.color-manager
     sandy081.todotasks
     sensourceinc.vscode-sql-beautify
+    shakram02.bash-beautify
     sidharthachatterjee.vscode-tailwindcss
     sleistner.vscode-fileutils
     steoates.autoimport
+    streetsidesoftware.code-spell-checker
     techer.open-in-browser
     thisotherthing.vscode-todo-list
+    urbantrout.refactor-css
     vscode-icons-team.vscode-icons
-    wushuaiBUAA.autocomplete-english-word
+    wingrunr21.vscode-ruby
     ypresto.vscode-intelli-refactor
