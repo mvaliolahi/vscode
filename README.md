@@ -60,6 +60,13 @@
     Column (box) selection = Place the cursor in one corner and then hold Shift+Alt while dragging to the opposite corner
     Close panel =  ctrl + j
 
+
+### Gitlens shoirtcut issue
+
+set `gitlens.keymap` to `none`.
+
+    {   "key": "ctrl+shift+g",   "command": "gitlens.views.repositories:explorer.focus" }
+
 ### Settings
 
     - Enable auto save:  ctrl + ,  ---> search for auto save
@@ -228,3 +235,80 @@ Depending on your computer's speed, the length of your files and the number of r
     vscode-icons-team.vscode-icons
     wingrunr21.vscode-ruby
     ypresto.vscode-intelli-refactor
+
+
+### Keybindings
+
+[
+    {
+        "key": "ctrl+shift+c",
+        "command": "clipboard-manager.editor.pickAndPaste",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-clipboard-manager.editor.pickAndPaste",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+m ctrl+shift+m",
+        "command": "markdown.showPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-markdown.showPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "better-phpunit.run"
+    },
+    {
+        "key": "meta+k meta+r",
+        "command": "-better-phpunit.run"
+    },
+    {
+        "key": "ctrl+shift+alt+p",
+        "command": "better-phpunit.run-previous"
+    },
+    {
+        "key": "meta+k meta+p",
+        "command": "-better-phpunit.run-previous"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+shift+g shift+b",
+        "command": "-gitlens.toggleCodeLens",
+        "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "gitlens.views.repositories:explorer.focus"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm"
+    }
+]
