@@ -58,6 +58,7 @@
     Goto Previous Edit point = ctrl + alt + -
     Shrink/expand selection = Shift+Alt+Right or Shift+Alt+LEFT
     Column (box) selection = Place the cursor in one corner and then hold Shift+Alt while dragging to the opposite corner
+    Close panel =  ctrl + j
 
 ### Settings
 
