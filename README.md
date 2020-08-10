@@ -78,6 +78,7 @@ set `gitlens.keymap` to `none`.
     - Hidden Menu Bar = ctrl + shift + p  ---> Toggle Menu Bar
     - Remove Visual Studio Code from title bar = goto settings and search for '"window.title": "${activeEditorLong}"' then remove appName.
     - Ctrl + Click goto definition: "editor.gotoLocation.multipleDefinitions": "goto"
+    - Search in git ignore files: set `search.useIgnoreFiles` to false
 
 ### Font
 
@@ -177,10 +178,11 @@ Depending on your computer's speed, the length of your files and the number of r
 ### Awesome Plugins 
 
     adrianwilczynski.alpine-js-intellisense
+    ahinkle.laravel-model-snippets
     alefragnani.Bookmarks
     amiralizadeh9480.laravel-extra-intellisense
-    Anjali.clipboard-history
     atlassian.atlascode
+    auchenberg.vscode-browser-preview
     austenc.tailwind-docs
     BernardXiong.env-vscode
     bmewburn.vscode-intelephense-client
@@ -189,6 +191,7 @@ Depending on your computer's speed, the length of your files and the number of r
     christian-kohler.path-intellisense
     CoenraadS.disableligatures
     damianbal.vs-phpclassgen
+    DiemasMichiels.emulate
     donjayamanne.jquerysnippets
     eamodio.gitlens
     ecmel.vscode-html-css
@@ -196,18 +199,29 @@ Depending on your computer's speed, the length of your files and the number of r
     Equinusocio.vsc-community-material-theme
     Equinusocio.vsc-material-theme
     equinusocio.vsc-material-theme-icons
+    ericadamski.carbon-now-sh
     felixfbecker.php-debug
     formulahendry.auto-close-tag
     formulahendry.auto-rename-tag
     formulahendry.code-runner
     freshbitsweb.laravel-traveller
+    GitLab.gitlab-workflow
+    humao.rest-client
+    ikappas.composer
     iocave.monkey-patch
     jakebathman.mysql-syntax
+    jasonn-porch.gitlab-mr
+    jock.svg
     junstyle.php-cs-fixer
+    kisstkondoros.vscode-gutter-preview
+    KnisterPeter.vscode-github
     liuji-jim.vue
     mads-hartmann.bash-ide-vscode
     MehediDracula.php-constructor
     MehediDracula.php-namespace-resolver
+    MicroProfile-Community.mp-rest-client-generator-vscode-ext
+    MicroProfile-Community.mp-starter-vscode-ext
+    MicroProfile-Community.vscode-microprofile-pack
     mikestead.dotenv
     mishkinf.goto-next-previous-member
     ms-azuretools.vscode-docker
@@ -217,11 +231,16 @@ Depending on your computer's speed, the length of your files and the number of r
     octref.vetur
     onecentlin.laravel-blade
     onecentlin.laravel5-snippets
+    Open-Liberty.liberty-dev-vscode-ext
     phproberto.vscode-php-getters-setters
     PKief.material-icon-theme
+    pnp.polacode
     rebornix.ruby
+    redhat.java
+    redhat.vscode-quarkus
     redhat.vscode-yaml
     royaction.color-manager
+    ryannaddy.laravel-artisan
     sandy081.todotasks
     sensourceinc.vscode-sql-beautify
     shakram02.bash-beautify
@@ -230,15 +249,21 @@ Depending on your computer's speed, the length of your files and the number of r
     steoates.autoimport
     streetsidesoftware.code-spell-checker
     techer.open-in-browser
+    thekalinga.bootstrap4-vscode
     thisotherthing.vscode-todo-list
+    tht13.html-preview-vscode
     urbantrout.refactor-css
+    vscjava.vscode-java-debug
     vscode-icons-team.vscode-icons
     wingrunr21.vscode-ruby
     ypresto.vscode-intelli-refactor
+    Zaczero.bootstrap-v4-snippets
+
 
 
 ### Keybindings
 
+// Place your key bindings in this file to override the defaults
 [
     {
         "key": "ctrl+shift+c",
@@ -283,19 +308,6 @@ Depending on your computer's speed, the length of your files and the number of r
     },
     {
         "key": "ctrl+e",
-        "command": "workbench.view.explorer"
-    },
-    {
-        "key": "ctrl+shift+e",
-        "command": "-workbench.view.explorer"
-    },
-    {
-        "key": "ctrl+shift+g shift+b",
-        "command": "-gitlens.toggleCodeLens",
-        "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'chorded'"
-    },
-    {
-        "key": "ctrl+e",
         "command": "-workbench.action.quickOpen"
     },
     {
@@ -304,11 +316,106 @@ Depending on your computer's speed, the length of your files and the number of r
         "when": "inFilesPicker && inQuickOpen"
     },
     {
-        "key": "ctrl+shift+g",
-        "command": "gitlens.views.repositories:explorer.focus"
+        "key": "ctrl+shift+g shift+b",
+        "command": "-gitlens.toggleCodeLens",
+        "when": "editorTextFocus && gitlens:canToggleCodeLens && gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g b",
+        "command": "-gitlens.toggleFileBlame",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+    },
+    {
+        "key": "ctrl+shift+g s",
+        "command": "-gitlens.showQuickRepoStatus",
+        "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g h",
+        "command": "-gitlens.showQuickFileHistory",
+        "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g .",
+        "command": "-gitlens.diffWithNext",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "ctrl+shift+g ,",
+        "command": "-gitlens.diffWithPrevious",
+        "when": "editorTextFocus && isInDiffLeftEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g -",
+        "command": "-gitlens.showLastQuickPick",
+        "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g shift+h",
+        "command": "-gitlens.showQuickRepoHistory",
+        "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g /",
+        "command": "-gitlens.showCommitSearch",
+        "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g w",
+        "command": "-gitlens.diffLineWithWorking",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g [IntlBackslash]",
+        "command": "-gitlens.diffLineWithPrevious",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g shift+,",
+        "command": "-gitlens.diffLineWithPrevious",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g c",
+        "command": "-gitlens.showQuickCommitFileDetails",
+        "when": "editorTextFocus && gitlens:enabled && config.gitlens.keymap == 'chorded'"
+    },
+    {
+        "key": "ctrl+shift+g shift+.",
+        "command": "-gitlens.diffWithWorking",
+        "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "ctrl+shift+g ,",
+        "command": "-gitlens.diffWithPreviousInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g ,",
+        "command": "-gitlens.diffWithPrevious",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "ctrl+shift+g .",
+        "command": "-gitlens.diffWithNextInDiffLeft",
+        "when": "editorTextFocus && isInDiffLeftEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "ctrl+shift+g .",
+        "command": "-gitlens.diffWithNext",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "ctrl+shift+g g",
+        "command": "-workbench.view.scm",
+        "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
     },
     {
         "key": "ctrl+shift+g",
         "command": "-workbench.view.scm"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "gitlens.views.repositories:explorer.focus"
     }
 ]
