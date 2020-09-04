@@ -67,6 +67,10 @@ set `gitlens.keymap` to `none`.
 
     {   "key": "ctrl+shift+g",   "command": "gitlens.views.repositories:explorer.focus" }
 
+    OR
+
+    {   "key": "ctrl+shift+g",   "command": "gitlens.showRepositoriesView" }
+
 ### Settings
 
     - Enable auto save:  ctrl + ,  ---> search for auto save
